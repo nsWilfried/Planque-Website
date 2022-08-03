@@ -1,0 +1,10 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+      -webkit-transition-property: all;
+    -webkit-transition-duration: .2s;
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+    -moz-transition-property: all;
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}

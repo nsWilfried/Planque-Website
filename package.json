@@ -9,9 +9,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/sanity": "^0.10.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@sanity/client": "^3.3.2",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
+    "nuxt-webfontloader": "^1.1.0",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
@@ -19,6 +25,9 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "postcss": "^8.4.4"
+    "fibers": "^5.0.2",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.4",
+    "sass-loader": "^10.3.1"
   }
 }

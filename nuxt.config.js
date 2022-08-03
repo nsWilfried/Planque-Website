@@ -4,9 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'planque-client',
+    title: 'Collège Père Augustin Planque',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,7 +21,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/styles/main.css'
   ],
+  tailwindcss: {cssPath: '~/assets/styles/main.css',    configPath: 'tailwind.config.js' },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -34,16 +36,47 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/sanity/module'
+    '@nuxtjs/sanity/module', 
+    '@nuxtjs/style-resources', 
+    '@nuxtjs/fontawesome', 
+    'nuxt-webfontloader'
+
   ],
 
   sanity : {
     projectId: "b0ckc99w"
   }, 
 
+  loading: {
+    color: 'blue', 
+    heigth: "4px"
+  }, 
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+
   ],
+  webfontloader: {
+    google: {
+      families: ['Poppins:400,700, 900', 'Raleway:400, 700, 900', 'Lato:400'] 
+    }
+  },
+  styleResources: {
+    scss: [
+      './assets/styles/vars/*.scss',
+      './assets/styles/abstracts/_mixins.scss' 
+      ]
+  }, 
+
+  tailwindcss: {
+    exposeConfig: true
+  }, 
+ 
+  fontawesome:  {
+    icons: {
+      solid: ['faHome'],
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

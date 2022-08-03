@@ -1,6 +1,7 @@
 <template>
     <div>
 
+
         <div v-for="post in posts" :key='post.id'>
              {{post}}
         </div>
@@ -13,6 +14,7 @@ export default {
     async asyncData({isDev, route, store, env, params,$sanity, req, res, redirect, error}) {
         const query = groq`*[_type=="post"]`
         const posts = await $sanity.fetch(query)
+       
         return {
             posts
         }
