@@ -1,7 +1,9 @@
 <template>
     <div class='menu w-full bg-red-400 flex'>
         <div class='menu__logo bg-white flex justify-center items-center '>
-            <span> je suis le logo</span> 
+            <div>
+                <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
+            </div> 
         </div>
         <div class='menu__content w-full bg-green-400 flex flex-col  '>
             <div class="h-2/4 bg-gray-400  w-full grid grid-cols-3">
