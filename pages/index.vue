@@ -1,15 +1,20 @@
 <template>
 
-  <div class="w-full h-auto">
-    <div class="main w-full h-screen flex flex-col justify-center items-center " >
+  <div class="w-full h-auto ">
+    <div class="main w-full h-screen flex flex-col justify-center items-center relative" >
+
+      
 
       <!-- swiper elements -->
-      <div class="swiper  w-full h-full">
+      <div class="swiper  w-full h-full" >
 
-        <div class="swiper-wrapper ">
+        <!-- overlay -->
+        <div class="overlay w-full h-full bg-black text-white "></div>
+
+
+        <div class="swiper-wrapper swiper_content_zindex"  >
 
           <div v-for="i in 6" :key="i" class="swiper-slide" :class="`slide--${i}`">
-        <!-- <div class="overlay w-full h-full bg-black text-white "> </div> -->
 
             <div class="w-full h-full flex justify-center items-center">
               <div class="bg- h-full flex justify-center items-center" style="width:1320px;">
@@ -24,7 +29,7 @@
 
                   <!-- description -->
                   <div class="swiper_description bg-red- flex justify-center  w-full p-5">
-                    <span class="mt-4 text-xl text-gray-500 text-center">
+                    <span class="mt-4 text-xl text-white text-center">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta odit veniam ullam sint cum
                       laboriosam nemo quod nihil saepe ab laudantium molestiae consectetur accusamus, vel ducimus
                       doloribus quaerat deleniti.
@@ -47,9 +52,9 @@
           </div>
         </div>
 
-        <!-- If navigation buttons are needed -->
-        <div class="swiper-button-prev bg-white p-10"></div>
-        <div class="swiper-button-next bg-white p-10"></div>
+        <!-- navigation -->
+        <div class="swiper-button-prev bg-white ml-20 p-10 swiper_content_zindex"></div>
+        <div class="swiper-button-next bg-white p-10 mr-20 swiper_content_zindex"></div>
 
 
 
@@ -129,6 +134,14 @@ export default {
   background-position: center;
 }
 .overlay {
-  opacity: 0.3;
+  opacity: 0.4;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.swiper_content_zindex{
+  z-index: 50000000;
 }
 </style>

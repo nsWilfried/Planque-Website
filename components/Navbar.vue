@@ -131,6 +131,7 @@ export default {
         @include center; 
         font-family:$secondary-font; 
         font-weight:bold;
+        color: white ;
 
          &:hover{
              width: 100%;
