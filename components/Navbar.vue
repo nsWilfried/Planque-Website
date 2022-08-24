@@ -1,12 +1,12 @@
 <template>
     <div class='menu w-full bg-red-400 flex'>
         <div class='menu__logo bg-white flex justify-center items-center '>
-            <div>
+            <routerLink to="/">
                 <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
-            </div> 
+            </routerLink> 
         </div>
         <div class='menu__content w-full bg-green- flex flex-col  ' style="background:#248232;">
-            <div class="h-2/4 bg-gray-400  w-full grid grid-cols-3">
+            <div class="h-2/4 bg-gray-  w-full grid grid-cols-3" style="background-color: #393832; color: white;">
                 <div class='menu__social'>
                     <div class='flex flex-row'>
                         <div class="menu__social__logo bg-white">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-5 h-2/4">
+            <div :class="`grid grid-cols-${links.length} h-2/4`">
                 <div v-for="link in links" :key='link.name' class=' flex justify-center items-center text-sm uppercase '>
                     <nuxt-link routerLinkActive='random' :to="link.linkTo" class='menu__link'>
                         {{link.name}}
@@ -68,7 +68,7 @@ export default {
                 links:  [
                     {
                         name: 'Acceuil', 
-                        linkTo: ''
+                        linkTo: '/'
                     }, 
                     {
                         name: 'Blog', 
@@ -85,6 +85,10 @@ export default {
                     {
                         name: 'FAQ', 
                         linkTo: 'foire-aux-questions'
+                    }
+                    , {
+                        name: 'Contact', 
+                        linkTo: 'contact'
                     }
                 ]
             }

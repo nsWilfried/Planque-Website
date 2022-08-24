@@ -48,7 +48,7 @@ export default {
   }, 
 
   loading: {
-    color: 'blue', 
+    color: '#bb1e32', 
     heigth: "4px"
   }, 
 
