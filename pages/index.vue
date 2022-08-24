@@ -1,12 +1,16 @@
 <template>
 
   <div class="w-full h-auto">
-    <div class="main w-full h-screen bg-red-400 flex flex-col justify-center items-center ">*
+    <div class="main w-full h-screen flex flex-col justify-center items-center " >
 
       <!-- swiper elements -->
-      <div class="swiper bg-red-400 w-full h-full">
-        <div class="swiper-wrapper">
+      <div class="swiper  w-full h-full">
+
+        <div class="swiper-wrapper ">
+
           <div v-for="i in 6" :key="i" class="swiper-slide" :class="`slide--${i}`">
+        <!-- <div class="overlay w-full h-full bg-black text-white "> </div> -->
+
             <div class="w-full h-full flex justify-center items-center">
               <div class="bg- h-full flex justify-center items-center" style="width:1320px;">
 
@@ -14,7 +18,7 @@
                   <!-- title -->
                   <div class="swiper_title w-full bg-yellow- flex justify-center items-center p-5">
                     <span
-                      class="text-4xl font font-bold tracking-tight text-gray-900 sm:tracking-tight sm:text-7xl text-center">Bienvenue
+                      class="text-4xl font font-bold tracking-tight text-white sm:tracking-tight sm:text-7xl text-center">Bienvenue
                       sur le site du CPAP {{ i }}</span>
                   </div>
 
@@ -27,10 +31,13 @@
                     </span>
                   </div>
 
+                  
+
                   <!-- call to action -->
                   <div class="swiper_description bg-violet-200 flex justify-center  w-full p-5">
                     <button
-                      class="inline-block text-center bg-indigo-600 border border-transparent rounded-lg  py-3 px-8  text-white font-bold">Inscrivez-vous</button>
+                    style="width: 200px;background:#bb1e32;border-radius: 20px;"
+                      class="inline-block text-center border border-transparent  py-3 px-8  text-white font-bold">Inscrivez-vous</button>
                   </div>
                 </div>
 
@@ -50,10 +57,10 @@
       <!-- swiper elements -->
 
       <!-- banner informations -->
-      <div class="w-full relative  bg-green-500 flex justify-center items-center" style="height: 200px;">
-        <div class="bg-blue-300  h-full flex" style="width: 1320px;position: absolute;top:-40%; z-index: 10000; ">
-          <div class="flex justify-center items-center bg-blue-600 w-1/3">college</div>
-          <div  class="flex justify-center items-center bg-pink-600 w-1/3">lycee</div>
+      <div class="w-full relative  bg-green- flex justify-center items-center" style="height: 200px;">
+        <div class="bg-white shadow-lg h-full flex" style="width: 1320px;position: absolute;top:-40%; z-index: 10000; ">
+          <div class="flex justify-center items-center bg-blue- w-1/3">college</div>
+          <div  class="flex justify-center items-center bg-pink- w-1/3">lycee</div>
           <div class="hello flex justify-center items-center w-2/3 p-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aspernatur rerum quae illum aliquid iste a, iusto quisquam praesentium corrupti. In asperiores sapiente sint totam ipsa officiis dolore necessitatibus soluta!
           </div>
@@ -116,4 +123,12 @@ export default {
 </script>
 
 <style lang="scss">
+.swiper {
+  background-image: url("../assets/imgs/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.overlay {
+  opacity: 0.3;
+}
 </style>

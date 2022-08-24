@@ -5,7 +5,7 @@
                 <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
             </div> 
         </div>
-        <div class='menu__content w-full bg-green-400 flex flex-col  '>
+        <div class='menu__content w-full bg-green- flex flex-col  ' style="background:#248232;">
             <div class="h-2/4 bg-gray-400  w-full grid grid-cols-3">
                 <div class='menu__social'>
                     <div class='flex flex-row'>
@@ -96,6 +96,7 @@ export default {
 <style lang="scss">
     .menu {
         height:130px; 
+        font-family: "Poppins";
         &__logo {
             width: 300px; 
 
