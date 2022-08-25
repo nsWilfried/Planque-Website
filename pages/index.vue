@@ -41,8 +41,8 @@
                   <!-- call to action -->
                   <div class="swiper_description bg-violet-200 flex justify-center  w-full p-5">
                     <button
-                    style="width: 200px;background:#bb1e32;border-radius: 20px;"
-                      class="inline-block text-center border border-transparent  py-3 px-8  text-white font-bold">Inscrivez-vous</button>
+                    style="width: 230px;background:#bb1e32; padding: 20px 30px; "
+                      class="inline-block text-center border border-transparent  py-3 px-8  text-white font-bold uppercase">Inscrivez-vous</button>
                   </div>
                 </div>
 
@@ -66,7 +66,7 @@
         <div class="bg-white shadow-lg h-full flex" style="width: 1320px;position: absolute;top:-40%; z-index: 10000; ">
           <div class="flex justify-center items-center bg-blue- w-1/3">college</div>
           <div  class="flex justify-center items-center bg-pink- w-1/3">lycee</div>
-          <div class="hello flex justify-center items-center w-2/3 p-1">
+          <div class="hello flex justify-center items-center w-2/3  shadow-inner text-white p-5" style="background-color: #bb1e32;">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aspernatur rerum quae illum aliquid iste a, iusto quisquam praesentium corrupti. In asperiores sapiente sint totam ipsa officiis dolore necessitatibus soluta!
           </div>
         </div>

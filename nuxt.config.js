@@ -16,6 +16,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ], 
+    scripts: [
+      {
+        path: "./assets/scripts/main.js"
+      }
     ]
   },
 
@@ -39,7 +44,8 @@ export default {
     '@nuxtjs/sanity/module', 
     '@nuxtjs/style-resources', 
     '@nuxtjs/fontawesome', 
-    'nuxt-webfontloader'
+    'nuxt-webfontloader', 
+
 
   ],
 
@@ -73,8 +79,10 @@ export default {
   }, 
  
   fontawesome:  {
+    suffix: false, 
     icons: {
-      solid: ['faHome'],
+      solid: true, 
+      brands: true
     }
   },
 

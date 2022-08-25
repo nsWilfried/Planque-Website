@@ -1,16 +1,16 @@
 <template>
-    <div>
+    <div class="w-full flex justify-center bg-red- items-center h-auto">
 
-        <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
+        <footer class="p-4 footer bg-white sm:p-6 dark:bg-gray-900">
             <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
+                <div class="mb-6 md:mb-0 flex justify-center items-center">
                     <routerLink to="/" class="flex items-center">
-                        <img src="../assets/imgs/logo.png" class="mr-3 h-16 w-16"
+                        <img src="../assets/imgs/logo.png" class="mr-3 h-32 w-32"
                             alt="Collège Père Augustin planque logo">
 
-                        <span
+                        <!-- <span
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white w-12 uppercase">Collège
-                            Père Augustin Planque</span>
+                            Père Augustin Planque</span> -->
 
                     </routerLink>
                 </div>
@@ -108,3 +108,9 @@ export default {
     name: "Footer"
 }
 </script>
+
+<style lang="scss">
+.footer{
+    width: 90%;
+}
+</style>
