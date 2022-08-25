@@ -30,7 +30,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <!-- contact -->
+                    <div >
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">informations</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
@@ -45,7 +46,30 @@
                         </ul>
                     </div>
 
-                    <!-- localisation -->
+                    <!-- horaires -->
+                    <div class="bg-green-">
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Horaires d'ouverture</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4 flex w-full justify-between">
+                                <div>
+                                    <span 
+                                    class="hover:underline ">Lundi</span>
+                                </div>
+
+                                <div>
+                                    <span>
+                                        hello world
+                                    </span>
+                                </div>
+                                
+                            </li>
+                            <li class="mb-4">
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">+22893546439</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
 
 
                 </div>

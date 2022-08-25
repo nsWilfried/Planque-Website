@@ -5,7 +5,7 @@
                 <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
             </routerLink> 
         </div>
-        <div class='menu__content w-full bg-green- flex flex-col  ' style="background:#248232;">
+        <div class='menu__content w-full bg-green- flex flex-col  bg-green-600' >
             <div class="h-2/4 bg-gray-  w-full grid grid-cols-3" style="background-color: #393832; color: white;">
                 <div class='menu__social'>
                     <div class='flex flex-row'>
