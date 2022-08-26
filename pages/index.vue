@@ -1,18 +1,20 @@
 <template>
 
   <div class="w-full h-auto ">
-    <div class="main w-full h-screen flex flex-col justify-center items-center relative" >
 
-      
+    <!-- banner -->
+    <div class="main w-full h-screen flex flex-col justify-center items-center relative">
+
+
 
       <!-- swiper elements -->
-      <div class="swiper  w-full h-full" >
+      <div class="swiper  w-full h-full">
 
         <!-- overlay -->
         <div class="overlay w-full h-full bg-black text-white "></div>
 
 
-        <div class="swiper-wrapper swiper_content_zindex"  >
+        <div class="swiper-wrapper swiper_content_zindex">
 
           <div v-for="i in 6" :key="i" class="swiper-slide" :class="`slide--${i}`">
 
@@ -36,12 +38,11 @@
                     </span>
                   </div>
 
-                  
+
 
                   <!-- call to action -->
                   <div class="swiper_description bg-violet-200 flex justify-center  w-full p-5">
-                    <button
-                    style="width: 230px;background:#bb1e32; padding: 20px 30px; "
+                    <button style="width: 230px;background:#bb1e32; padding: 20px 30px; "
                       class="inline-block text-center border border-transparent  py-3 px-8  text-white font-bold uppercase">Inscrivez-vous</button>
                   </div>
                 </div>
@@ -65,14 +66,29 @@
       <div class="w-full relative  bg-green- flex justify-center items-center" style="height: 200px;">
         <div class="bg-white shadow-lg h-full flex" style="width: 1320px;position: absolute;top:-40%; z-index: 10000; ">
           <div class="flex justify-center items-center bg-blue- w-1/3">college</div>
-          <div  class="flex justify-center items-center bg-pink- w-1/3">lycee</div>
-          <div class="hello flex justify-center items-center w-2/3  shadow-inner text-white p-5" style="background-color: #bb1e32;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aspernatur rerum quae illum aliquid iste a, iusto quisquam praesentium corrupti. In asperiores sapiente sint totam ipsa officiis dolore necessitatibus soluta!
+          <div class="flex justify-center items-center bg-pink- w-1/3">lycee</div>
+          <div class="hello flex justify-center items-center w-2/3  shadow-inner text-white p-5"
+            style="background-color: #bb1e32;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aspernatur rerum quae illum aliquid iste
+            a, iusto quisquam praesentium corrupti. In asperiores sapiente sint totam ipsa officiis dolore
+            necessitatibus soluta!
           </div>
         </div>
       </div>
     </div>
 
+
+    <div style="height: 500px;" class="bg-red- container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-6 gap-8">
+      <div class="nobody ">
+        hello
+      </div>
+      <!-- Remove class [ h-24 ] when adding a card block -->
+      <!-- Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border -->
+      <div class="rounded border-gray-300 dark:border-gray-700 border-dashed border-2 h-24"></div>
+      <!-- Remove class [ h-24 ] when adding a card block -->
+      <!-- Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border -->
+      <div class="rounded border-gray-300 dark:border-gray-700 border-dashed border-2 h-24"></div>
+    </div>
 
   </div>
 
@@ -133,15 +149,28 @@ export default {
   background-size: cover;
   background-position: center;
 }
+
 .overlay {
   opacity: 0.4;
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
 }
-.swiper_content_zindex{
+
+.swiper_content_zindex {
   z-index: 50000000;
+}
+
+.nobody{
+  
+  background: 
+   linear-gradient(179deg, rgba(255,255,255,1) 0%, rgba(218,188,188,1) 95%), 
+  url("../assets/imgs/pereplanque.png");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  color: white ;
 }
 </style>
