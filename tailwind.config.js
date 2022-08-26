@@ -8,7 +8,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    
+    require('flowbite/plugin')
   ],
   content: [
     `components/**/*.{vue,js}`,
@@ -18,5 +18,6 @@ module.exports = {
     `plugins/**/*.{js,ts}`,
     `App.{js,ts,vue}`,
     `app.{js,ts,vue}`, 
+    "./node_modules/flowbite/**/*.js"
   ]
 }

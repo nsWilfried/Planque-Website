@@ -6,9 +6,13 @@
         <!-- accordion for questions -->
         <div class="w-full h-auto my-10 flex justify-center">
             <div style="width: 1320px;">
-                <badger-accordion>
-                    <badger-accordion-item class="bg-red-300">
-                        <template slot="header">First Accordion Header</template>
+                <badger-accordion class="w-full bg-green-900">
+                    <badger-accordion-item >
+                        <template slot="header">
+                            <div class="bg-red-300 w-full ">
+                                <span>First Accordion Header</span>
+                            </div>
+                        </template>
                         <template slot="content">First Accordion Content</template>
                     </badger-accordion-item>
 

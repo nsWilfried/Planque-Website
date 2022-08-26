@@ -15,18 +15,18 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, 
+      {rel: "stylesheet", href: "https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"}
     ], 
-    scripts: [
-      {
-        path: "./assets/scripts/main.js"
+    script: [ {
+        src: 'https://unpkg.com/flowbite@1.5.2/dist/flowbite.js', 
       }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/styles/main.css'
+    '~/assets/styles/main.css', 
   ],
   tailwindcss: {cssPath: '~/assets/styles/main.css',    configPath: 'tailwind.config.js' },
 
