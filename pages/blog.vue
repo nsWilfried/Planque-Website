@@ -9,7 +9,7 @@
                 <div class="md:max-w-lg mx-auto text-center mb-20">
                     <h2 class="mb-4 font-heading font-semibold text-6xl sm:text-7xl">Actualités</h2>
                     <p class="text-lg text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                        sint. Velit officia consequat duis enim.</p>
+                        sint. Velit offhellicia consequat duis enim.</p>
                 </div>
                 <div class="pt-14 xl:px-0 px-4">
                     <div class="w-full lg:flex">

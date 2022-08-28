@@ -13,7 +13,7 @@
             <dt class="mb-4">
               <h3 class="text-xl font-semibold">
                 We already have ongoing projects. Will Valohai easily integrate
-                with them?
+                with htem?
               </h3>
             </dt>
             <dd class="mb-16">
@@ -66,6 +66,6 @@ import { BadgerAccordion, BadgerAccordionItem } from "vue-badger-accordion";
 import Banner from "../components/Banner.vue";
 export default {
   layout: "page",
-  components: { Banner, BadgerAccordion, BadgerAccordionItem },
+  components: { Banner, BadgerAccordion, BadgerAccordionItem  },
 };
 </script>
