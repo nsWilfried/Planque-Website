@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex  py-3 text-gray-700 rounded-lg border-b border-white word  " aria-label="Breadcrumb">
+    <nav class="flex  py-3 text-gray-700 border-b-2 border-white  " aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <routerLink to="/"
