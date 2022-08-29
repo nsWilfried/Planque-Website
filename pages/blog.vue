@@ -81,16 +81,20 @@
 
         <!-- call to action -->
         <CTA/>
+
+        <!-- formulaire de contact -->
+    <contact-form/>
     </div>
 </template>
 
 <script>
 import Banner from "../components/Banner.vue"
 import CTA from "../components/CTA.vue"
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
     layout: "page",
-    components: { Banner, CTA},
+    components: { Banner, CTA, ContactForm},
     data() {
         return {
 

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex justify-center bg-red- items-center h-auto">
-    <footer class="p-4 footer bg-white sm:p-6 dark:bg-gray-900">
+    <footer class="p-4 footer bg- sm:p-6 dark:bg-gray-900" style="background-color: ;">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0 flex justify-center items-center">
           <routerLink to="/" class="flex items-center">

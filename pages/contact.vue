@@ -29,7 +29,7 @@
                     <div class="w-full lg:w-1/2 xl:pt-10 lg:pl-24">
                         <div class="flex flex-col items-start xl:justify-start 2xl:justify-end xl:px-0 px-4">
                             <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-red-500">Envoyer nous un message</h1>
-                            <div class="w-full 2xl:w-8/12 mt-3" role="form">
+                            <div class="w-full  mt-3" role="form">
                                 <h2 class="text-gray-800  md:text-lg leading-8 tracking-wider">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, distinctio?</h2>
                                 <div v-for="(element, index) in formInputs" :key="index" class="mt-4 md:mt-8">
                                     <p class="text-gray-800  font-medium">{{element.name}}</p>

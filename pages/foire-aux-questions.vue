@@ -57,15 +57,20 @@
         </div>
       </div>
     </div>
+
+    <!-- formulaire de contact -->
+    <contact-form/>
   </div>
 </template>
 
 <script>
 import { BadgerAccordion, BadgerAccordionItem } from "vue-badger-accordion";
+import ContactForm from "../components/ContactForm.vue";
+
 
 import Banner from "../components/Banner.vue";
 export default {
   layout: "page",
-  components: { Banner, BadgerAccordion, BadgerAccordionItem  },
+  components: { Banner, BadgerAccordion, BadgerAccordionItem, ContactForm  },
 };
 </script>

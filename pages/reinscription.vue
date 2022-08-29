@@ -23,7 +23,11 @@
       </div>
     </section>
 
+    <!-- call to action -->
     <CTA/>
+
+    <!-- formulaire de contact -->
+    <contact-form/>
   </div>
 </template>
 
@@ -31,8 +35,10 @@
 import Banner from "../components/Banner.vue";
 import InscriptionForm from "../components/InscriptionForm.vue";
 import CTA from "../components/CTA.vue";
+import ContactForm from "../components/ContactForm.vue";
+
 export default {
   layout: "page",
-  components: { Banner, InscriptionForm, CTA },
+  components: { Banner, InscriptionForm, CTA , ContactForm},
 };
 </script>

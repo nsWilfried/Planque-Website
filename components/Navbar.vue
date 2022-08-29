@@ -1,5 +1,22 @@
 <template>
     <div class='menu w-full bg-red-400 flex'>
+
+        <div class=" hidden menu_mobile">
+            <!-- Swiper -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide menu">Menu slide</div>
+                    <div class="swiper-slide content">
+                        <div class="menu-button">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        Content slide
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class='menu__logo bg-white flex justify-center items-center '>
             <routerLink to="/">
                 <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
@@ -74,13 +91,17 @@ export default {
                         name: 'Blog', 
                         linkTo: 'blog'
                     }, 
+                    // {
+                    //     name: 'Renseigements', 
+                    //     linkTo: 'renseignements'
+                    // }, 
                     {
-                        name: 'Renseigements', 
-                        linkTo: 'renseignements'
+                        name: 'Inscription (2022-2023)', 
+                        linkTo: 'inscription'
                     }, 
                     {
-                        name: 'Inscription', 
-                        linkTo: 'inscription'
+                        name: 'Réinscription (2022-2023)', 
+                        linkTo: 'reinscription'
                     }, 
                     {
                         name: 'FAQ', 
@@ -155,4 +176,12 @@ export default {
         padding:20px 20px;
         color:#1b1b1b;
     }
+    
+    @media only screen and (min-width:320px) and (max-width: 768px) {
+        .menu{
+            display: none;
+        }
+    }
+
+    
 </style>
