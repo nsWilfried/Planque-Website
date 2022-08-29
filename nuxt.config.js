@@ -79,10 +79,9 @@ export default {
   }, 
  
   fontawesome:  {
-    suffix: false, 
     icons: {
       solid: true, 
-      brands: true
+      brands: true, 
     }
   },
 

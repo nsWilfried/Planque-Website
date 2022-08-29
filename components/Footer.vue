@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex justify-center bg-red- items-center h-auto">
-    <footer class="p-4 footer bg- sm:p-6 dark:bg-gray-900" style="background-color: ;">
+  <footer class="w-full flex justify-center bg-red- items-center h-auto">
+    <div class="p-4 footer bg- sm:p-6 dark:bg-gray-900" style="background-color: ;">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0 flex justify-center items-center">
           <routerLink to="/" class="flex items-center">
@@ -18,12 +18,12 @@
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
             <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase border-l-8 border- border-red-400 pl-2"
+              class="mb-6 text-white text-sm font-semibold uppercase border-l-8 border- border-red-400 pl-2"
             >
               Liens Utiles
             </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
-              <li class="mb-4">
+            <ul class="text-white">
+              <li class="mb-4 ">
                 <router-link to="/contact" class="hover:underline"
                   >Contact</router-link
                 >
@@ -44,11 +44,11 @@
           <!-- contact -->
           <div>
             <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase border-l-8  pl-2 border-red-400"
+              class="mb-6 underline text-sm font-semibold text-white uppercase border-l-8  pl-2 border-red-400"
             >
               informations
             </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
+            <ul class="text-white">
               <li class="mb-4">
                 <a
                   href="https://github.com/themesberg/flowbite"
@@ -67,10 +67,10 @@
           <!-- horaires -->
           <div class="bg-green-">
             <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase border-l-8 pl-2 border-red-400">
+              class="mb-6 text-sm font-semibold text-white uppercase border-l-8 pl-2 border-red-400">
               Horaires d'ouverture
             </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
+            <ul class="text-white">
               <li class="mb-4 flex w-full justify-between">
                 <div>
                   <span class="hover:underline">Lundi</span>
@@ -93,7 +93,7 @@
         class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
       />
       <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        <span class="text-smtext-white sm:text-center dark:text-gray-400"
           >© 2022
           <router-link to="/" class="hover:underline">CPAP™</router-link>. Tout
           drois réservés.
@@ -101,7 +101,7 @@
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -119,7 +119,7 @@
           </a>
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-gray-500 hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -137,8 +137,8 @@
           </a>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -150,5 +150,9 @@ export default {
 <style lang="scss">
 .footer {
   width: 90%;
+}
+footer {
+  background-color: #1c2e5e;
+  color: white;
 }
 </style>

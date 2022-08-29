@@ -3,63 +3,99 @@
     <!-- banner -->
     <Banner bannerTitle="Foires aux questions" />
     <!-- accordion for questions -->
-    <div class="w-full h-auto my-10 flex justify-center">
-      <div class="bg-lightblue py-20 px-4">
-        <div class="mx-auto max-w-6xl flex flex-col md:flex-row">
-          <h2 class="mr-8 w-full md:w-1/3 text-3xl font-extrabold leading-9">
-            Questions fréquentes
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <span class="relative inline-block">
+              <span class="relative">Questions fréquentes</span>
+            </span>
           </h2>
-          <dl class="w-full md:w-2/3">
-            <dt class="mb-4">
-              <h3 class="text-xl font-semibold">
-                We already have ongoing projects. Will Valohai easily integrate
-                with htem?
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-                Running existing machine learning projects in Valohai is very
-                simple! Integration only requires adding a valohai.yaml
-                configuration file. Moving projects in and out of Valohai is
-                easy – the integration is only the configuration file.
+          <p class="text-base text-gray-700 md:text-lg">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque
+            ipsa quae.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-screen-xl sm:mx-auto">
+        <div class="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
+          <div class="space-y-8">
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                The quick, brown fox jumps over a lazy dog?
               </p>
-            </dd>
-            <dt class="mb-4">
-              <h3 class="text-xl font-semibold">
-                How do you compare to other data science platforms?
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-                We don’t. Valohai isn’t a data science platform; it&#x27;s a
-                Machine Learning Management Platform that handles the whole ML
-                pipeline from feature extraction, to training of your model and
-                to deploying it into production in a reproducible manner. Data
-                science platforms offer hosted notebooks and AutoML solutions.
+              <p class="text-gray-700">
+                Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to
+                explore strange new worlds.<br />
+                <br />
+                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
               </p>
-            </dd>
-            <dt class="mb-4">
-              <h3 class="text-xl font-semibold">
-                Does Valohai charge for computation?
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-                Depends. Most of our customers use their own cloud and thus pay
-                for usage according to their own agreements. Valohai
-                doesn&#x27;t charge anything on top of the per-user license fee.
-                If you don&#x27;t have a cloud provider, you can use our AWS,
-                GCP and Azure accounts, and we&#x27;ll only charge you for what
-                you use.
+            </div>
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                The first mate and his Skipper too will do?
               </p>
-            </dd>
-          </dl>
+              <p class="text-gray-700">
+                Well, the way they make shows is, they make one show. That show's called a pilot.<br />
+                <br />
+                Then they show that show to the people who make shows, and on the strength of that one show they decide
+                if they're going to make more shows. Some pilots get picked and become television programs.Some don't,
+                become nothing. She
+                starred in one of the ones that became nothing.
+              </p>
+            </div>
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                Is the Space Pope reptilian!?
+              </p>
+              <p class="text-gray-700">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even
+                know we were calling him Big Bear.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                How much money you got on you?
+              </p>
+              <p class="text-gray-700">
+                The first mate and his Skipper too will do their very best to make the others comfortable in their
+                tropic island nest.<br />
+                <br />
+                Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The
+                powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's
+                a demon on wheels.
+              </p>
+            </div>
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                Galaxies Orion's sword globular star cluster?
+              </p>
+              <p class="text-gray-700">
+                A business big enough that it could be listed on the NASDAQ goes belly up. Disappears!<br />
+                <br />
+                It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.
+              </p>
+            </div>
+            <div>
+              <p class="mb-4 text-xl font-medium">
+                When has justice ever been as simple as a rule book?
+              </p>
+              <p class="text-gray-700">
+                This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral.
+                Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- formulaire de contact -->
-    <contact-form/>
+    <contact-form />
   </div>
 </template>
 
@@ -71,6 +107,6 @@ import ContactForm from "../components/ContactForm.vue";
 import Banner from "../components/Banner.vue";
 export default {
   layout: "page",
-  components: { Banner, BadgerAccordion, BadgerAccordionItem, ContactForm  },
+  components: { Banner, BadgerAccordion, BadgerAccordionItem, ContactForm },
 };
 </script>

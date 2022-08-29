@@ -121,7 +121,21 @@
     <div style="height: 600px; width: 1320px"
       class="bg-red- container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 pt-6 gap-8">
       <div class="bg-gradient-to-r from-red- to-transparent">
-        <div class="nobody"></div>
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="lg:w-2/3 mx-auto">
+              <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
+                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0"
+                  src="../assets/imgs/banner.jpg">
+                <div class="text-center relative z-10 w-full">
+                  <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                  <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div class="rounded border-gray- flex justify-center items-center h-full">
         <div>
@@ -163,66 +177,76 @@
       </div>
     </section>
     <section class="bg-indigo-700 py-12 mt-20">
-        <div class="px-4 lg:px-0">
-            <div class="mx-auto container flex flex-wrap px-2 md:px-24">
-                <div class="flex sm:w-full md:w-1/2 lg:border-r md:border-r sm:border-r-0 border-indigo-400 pb-10 lg:pt-10">
-                    <div class="mr-5 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <rect x="3" y="4" width="18" height="4" rx="2" />
-                            <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-                            <line x1="10" y1="12" x2="14" y2="12" />
-                        </svg>
-                    </div>
-                    <div class="md:w-9/12 lg:w-9/12 mt-1">
-                        <h4 class="text-lg font-bold leading-tight text-white">Ready to use components</h4>
-                        <p class="text-base text-white leading-normal xl:w-10/12 pt-2">It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.</p>
-                    </div>
-                </div>
-                <div class="flex sm:w-full md:w-1/2 lg:pb-10 lg:pt-10">
-                    <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M9 12l2 2l4 -4" />
-                        </svg>
-                    </div>
-                    <div class="md:w-9/12 lg:w-9/12 mt-1">
-                        <h4 class="text-lg font-bold leading-tight text-white">Hight Quality UI you can reply on</h4>
-                        <p class="text-base text-white leading-normal xl:w-10/12 pt-2">Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
-                    </div>
-                </div>
-                <div class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 lg:border-r md:border-r sm:border-r-0 border-indigo-400 pt-10 lg:pb-20">
-                    <div class="mr-5 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <polyline points="7 8 3 12 7 16" />
-                            <polyline points="17 8 21 12 17 16" />
-                            <line x1="14" y1="4" x2="10" y2="20" />
-                        </svg>
-                    </div>
-                    <div class="md:w-9/12 lg:w-9/12 mt-1">
-                        <h4 class="text-lg font-bold leading-tight text-white">Coded by Developers for Developers</h4>
-                        <p class="text-base text-white leading-normal xl:w-10/12 pt-2">Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
-                    </div>
-                </div>
-                <div class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 border-indigo-400 pt-10 lg:pb-20">
-                    <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <rect x="3" y="4" width="18" height="12" rx="1" />
-                            <line x1="7" y1="20" x2="17" y2="20" />
-                            <line x1="9" y1="16" x2="9" y2="20" />
-                            <line x1="15" y1="16" x2="15" y2="20" />
-                        </svg>
-                    </div>
-                    <div class="md:w-9/12 lg:w-9/12 mt-1">
-                        <h4 class="text-lg font-bold leading-tight text-white">The Last UI kit you’ll ever need</h4>
-                        <p class="text-base text-white leading-normal xl:w-10/12 pt-2">We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
-                    </div>
-                </div>
+      <div class="px-4 lg:px-0">
+        <div class="mx-auto container flex flex-wrap px-2 md:px-24">
+          <div class="flex sm:w-full md:w-1/2 lg:border-r md:border-r sm:border-r-0 border-indigo-400 pb-10 lg:pt-10">
+            <div class="mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="3" y="4" width="18" height="4" rx="2" />
+                <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+                <line x1="10" y1="12" x2="14" y2="12" />
+              </svg>
             </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">Ready to use components</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">It provides a very simple start, no need to
+                write a lot of code, you just import it and start the primitive components and create the ones you need.
+              </p>
+            </div>
+          </div>
+          <div class="flex sm:w-full md:w-1/2 lg:pb-10 lg:pt-10">
+            <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <circle cx="12" cy="12" r="9" />
+                <path d="M9 12l2 2l4 -4" />
+              </svg>
+            </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">Hight Quality UI you can reply on</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">Modify the visual appearance of your site –
+                including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
+            </div>
+          </div>
+          <div
+            class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 lg:border-r md:border-r sm:border-r-0 border-indigo-400 pt-10 lg:pb-20">
+            <div class="mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="14" y1="4" x2="10" y2="20" />
+              </svg>
+            </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">Coded by Developers for Developers</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">Instead of just giving you the tools to
+                create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
+            </div>
+          </div>
+          <div class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 border-indigo-400 pt-10 lg:pb-20">
+            <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="3" y="4" width="18" height="12" rx="1" />
+                <line x1="7" y1="20" x2="17" y2="20" />
+                <line x1="9" y1="16" x2="9" y2="20" />
+                <line x1="15" y1="16" x2="15" y2="20" />
+              </svg>
+            </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">The Last UI kit you’ll ever need</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">We have chosen the bright color palettes
+                that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- quelques chiffres  -->
@@ -230,21 +254,21 @@
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
         <div class="text-center md:border-r">
-          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">144K</h6>
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">400</h6>
           <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
-            Downloads
+            Elèves
           </p>
         </div>
         <div class="text-center md:border-r">
-          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">12.9K</h6>
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">20</h6>
           <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
-            Subscribers
+            salles de classe
           </p>
         </div>
         <div class="text-center md:border-r">
-          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">48.3K</h6>
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">90%</h6>
           <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
-            Users
+            réussite au bac
           </p>
         </div>
         <div class="text-center">
@@ -260,7 +284,7 @@
     <section class="pt-20  bg-red- overflow-hidden">
       <div class="container mx-auto px-4">
         <div class="md:max-w-lg mx-auto text-center mb-20">
-          <h2 class="mb-4 font-heading font-semibold text-6xl sm:text-7xl">
+          <h2 class="mb-4  font-heading font-semibold text-6xl sm:text-7xl">
             Actualités
           </h2>
           <p class="text-lg text-gray-400">
@@ -358,7 +382,7 @@
     </div>
 
     <CTA />
-    <contact-form/>
+    <contact-form />
   </div>
 </template>
 

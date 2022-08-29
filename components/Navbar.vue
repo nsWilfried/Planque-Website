@@ -1,36 +1,21 @@
 <template>
-    <div class='menu w-full bg-red-400 flex'>
+    <div class='menu w-full bg-red- flex'>
 
-        <div class=" hidden menu_mobile">
-            <!-- Swiper -->
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide menu">Menu slide</div>
-                    <div class="swiper-slide content">
-                        <div class="menu-button">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        Content slide
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class='menu__logo bg-white flex justify-center items-center '>
             <routerLink to="/">
                 <img style="width: 100px; height: 100px" src="../assets/imgs/logo.png" alt="Logo du collège père augustin planque" srcset="">
             </routerLink> 
         </div>
         <div class='menu__content w-full bg-green- flex flex-col  bg-green-600' >
-            <div class="h-2/4 bg-gray-  w-full grid grid-cols-3" style="background-color: #393832; color: white;">
+            <div class="h-2/4 bg-gray-  w-full grid grid-cols-3" style="background-color: #1c2e5e; color: white;">
                 <div class='menu__social'>
                     <div class='flex flex-row'>
                         <div class="menu__social__logo bg-white">
+                            <font-awesome-icon icon="envelope" style="color:#bb1e32 ;font-size:20px"></font-awesome-icon>
                         </div>
 
                         <div class="menu__social__info">
-                            <span>wilfriedproject@gmail.com</span>
+                            <span class="font-medium">collegepereplanque@gmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -38,14 +23,11 @@
                 <div class='flex justify-center items-center'>
                     <div class='flex flex-row'>
                         <div class="menu__social__logo bg-white">
-                            <font-awesome-icon icon="dollar-sign"  style="font-size: 30px"/>
-                            <font-awesome-icon icon="cog"/>
-
-
+                            <font-awesome-icon icon="phone"  style="font-size: 20px; color:#bb1e32 ;"/>
                         </div>
 
                         <div class="menu__social__info">
-                            <span>wilfriedproject@gmail.com</span>
+                            <span class ="font-medium">(+228) 22 20 55 40 / 91 15 97 09 </span>
                         </div>
                     </div>
                 </div>
@@ -53,19 +35,21 @@
                 <div class='flex justify-center items-center'>
                     <div class='flex flex-row'>
                         <div class="menu__social__logo bg-white">
+                            <font-awesome-icon icon="location-dot"  style="font-size: 20px; color:#bb1e32 ;"/>
+
                         </div>
 
                         <div class="menu__social__info">
-                            <span>wilfriedproject@gmail.com</span>
+                            <span>488, rue KONDA Bè Kamalodo Lomé,Togo</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div :class="`grid grid-cols-${links.length} h-2/4`">
                 <div v-for="link in links" :key='link.name' class=' flex justify-center items-center text-sm uppercase '>
-                    <nuxt-link routerLinkActive='random' :to="link.linkTo" class='menu__link'>
+                    <routerLink  exactActiveClass='linkActive'  :to="link.linkTo" class='menu__link'>
                         {{link.name}}
-                    </nuxt-link>
+                    </routerLink>
                 </div>
                 
             </div>
@@ -131,8 +115,8 @@ export default {
             @include center; 
             &__logo {
                 @include center; 
-                height: 40px;
-                width: 40px;
+                height: 30px;
+                width: 30px;
                 border-radius: 5px; 
             
             }
@@ -168,7 +152,7 @@ export default {
        
 
     }
-    .random {
+    .linkActive {
         width: 200px;
              
         border:none;
