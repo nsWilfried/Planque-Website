@@ -171,5 +171,10 @@ import ContactForm from "../components/ContactForm.vue";
 export default {
   layout: "page",
   components: { Banner, InscriptionForm, CTA, ContactForm },
+  data() {
+    return {
+     
+    }
+  },
 };
 </script>

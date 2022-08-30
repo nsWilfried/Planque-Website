@@ -245,6 +245,40 @@
                 that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
             </div>
           </div>
+          <div class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 border-indigo-400 pt-10 lg:pb-20">
+            <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="3" y="4" width="18" height="12" rx="1" />
+                <line x1="7" y1="20" x2="17" y2="20" />
+                <line x1="9" y1="16" x2="9" y2="20" />
+                <line x1="15" y1="16" x2="15" y2="20" />
+              </svg>
+            </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">The Last UI kit you’ll ever need</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">We have chosen the bright color palettes
+                that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+            </div>
+          </div>
+          <div class="flex sm:w-full md:w-1/2 lg:border-t md:border-t sm:border-t-0 border-indigo-400 pt-10 lg:pb-20">
+            <div class="sm:ml-0 md:ml-10 lg:ml-10 mr-5 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="3" y="4" width="18" height="12" rx="1" />
+                <line x1="7" y1="20" x2="17" y2="20" />
+                <line x1="9" y1="16" x2="9" y2="20" />
+                <line x1="15" y1="16" x2="15" y2="20" />
+              </svg>
+            </div>
+            <div class="md:w-9/12 lg:w-9/12 mt-1">
+              <h4 class="text-lg font-bold leading-tight text-white">The Last UI kit you’ll ever need</h4>
+              <p class="text-base text-white leading-normal xl:w-10/12 pt-2">We have chosen the bright color palettes
+                that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

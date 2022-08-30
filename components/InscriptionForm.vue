@@ -33,113 +33,84 @@
             <form action="#" method="POST">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
-                  <div class="grid grid-cols-6 gap-4">
-                    <div class="sm:col-span-3">
+                  <div class="">
+                    <div class="sm:col-span-3 ">
                       <label
                         for="first-name"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-sm mt-2 font-medium text-gray-700"
                         >Nom de famille</label
                       >
                       <input
                         type="text"
                         name="first-name"
-                        class="mt-3 border-2 w-12/12 lg:w-full xl:w-10/12 focus:border-red-400"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
                       />
                     </div>
 
-                    <div class="col-span-6 sm:col-span-3">
+                    <div class="col-span-6  sm:col-span-3">
                       <label
                         for="last-name"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-sm mt-2 font-medium text-gray-700"
                         >Prénoms</label
                       >
                       <input
                         type="text"
                         name="last-name"
-                        class="mt-3 border-2 w-12/12 lg:w-full xl:w-10/12 focus:border-red-400"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
                       />
                     </div>
 
                     <div class="sm:col-span-4 w-full">
                       <label
                         for="email-address"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-sm mt-2 font-medium text-gray-700"
                         >Adresse mail</label
                       >
                       <input
                         type="text"
                         name="email-address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
                       />
                     </div>
 
                     <div class="sm:col-span-4 w-full">
                       <label
                         for="adress"
-                        class="block text-sm font-medium text-gray-700"
-                        >Adresse</label
-                      >
-                      <input
-                        type="text"
-                        name="address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-
-                    <div class="sm:col-span-4 w-full">
-                      <label
-                        for="adress"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-sm mt-2 font-medium text-gray-700"
                         >Ecole de provenance</label
                       >
                       <input
                         type="text"
                         name="address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-
-                    <div class="sm:col-span-4 w-full">
-                      <label
-                        for="adress"
-                        class="block text-sm font-medium text-gray-700"
-                        >Classe suivie l'année dernière</label
-                      >
-                      <input
-                        type="text"
-                        name="address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-
-                    <div class="sm:col-span-4 w-full">
-                      <label
-                        for="adress"
-                        class="block text-sm font-medium text-gray-700"
-                        >Classe à suivre cette année</label
-                      >
-                      <input
-                        type="text"
-                        name="address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
                       />
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
                       <label
-                        for="country"
+                        for="classe"
                         class="block text-sm font-medium text-gray-700"
-                        >Country</label
+                        >Classe suive l'année dernière</label
                       >
                       <select
-                        id="country"
-                        name="country"
-                        autocomplete="country-name"
-                        class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        name="classe"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+                        <option v-for="(item, index) in classes" :key="index">{{item}}</option>
+                      </select>
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="classe"
+                        class="block text-sm font-medium text-gray-700"
+                        >Classe à suivre cette année</label
+                      >
+                      <select
+                        name="classe"
+                        class="mt-3 border-2 w-12/12 lg:w-full"
+                      >
+                        <option v-for="(item, index) in classes" :key="index">{{item}}</option>
                       </select>
                     </div>
                   </div>
@@ -177,3 +148,29 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default  {
+    data() {
+      return {
+        classes: [
+          "6ème", 
+          "5ème", 
+
+          "4ème", 
+          "3ème", 
+          "2nde S", 
+          "2nde A4", 
+          "1ère D", 
+          "1ère C", 
+          "1ère A4", 
+          "Tle D", 
+          "Tle C", 
+          "Tle A4"
+
+
+      ]
+      }
+    },
+  }
+</script>
