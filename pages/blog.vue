@@ -5,7 +5,7 @@
 
         <!-- blog -->
         <section class="blog w-full h-auto flex bg-red-">
-            <section role="article" tabindex="0" class="bg-green- mt-6 mb-6  container mx-auto py-8 px-4">
+            <section class="bg-green- mt-6 mb-6  mx-auto py-8 px-4">
                 <div class="md:max-w-lg mx-auto text-center mb-20">
                     <h2 class="mb-4 font-heading font-semibold text-6xl sm:text-7xl">Actualités</h2>
                     <p class="text-lg text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

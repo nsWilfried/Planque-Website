@@ -3,7 +3,7 @@
     class="w-full flex bg-green-400 items-end justify-center"
     style="height: 400px"
   >
-    <div class="bg-red- flex banner__info flex-col justify-center">
+    <div class="flex bg-red- banner__info flex-col justify-center">
       <span
         class="text-white font-bold border-l-8 border- border-red-400 text-6xl pl-10 uppercase"
         >{{ bannerTitle }}</span
@@ -34,7 +34,7 @@ export default {
 @media only screen and (min-width: 320px) and (max-width: 900px) {
     .banner__info{
         width: 90%;
-
+        height: 200px;
         > span {
             font-size: 30px ;
         }
