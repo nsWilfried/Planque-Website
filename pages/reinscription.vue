@@ -2,32 +2,28 @@
   <div>
     <Banner bannerTitle="Réinscription" />
 
-
     <!-- formulaire de réinscription -->
     <section class="bg-red-">
       <div
-        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        class=" max-w-screen-xl px-4 py-8 mx-auto "
       >
         <div
-          style="width: 1320px"
-          class="mr-auto bg-green- place-self-center lg:col-span-7"
+          class="mr-auto bg-green- formulaire__inscription place-self-center lg:col-span-7"
         >
-
-
           <div
             class="lg:w-full lg:h-auto lg:flex lg:justify-center lg:items-center"
           >
-          <inscription-form/>
+            <inscription-form />
           </div>
         </div>
       </div>
     </section>
 
     <!-- call to action -->
-    <CTA/>
+    <CTA />
 
     <!-- formulaire de contact -->
-    <contact-form/>
+    <contact-form />
   </div>
 </template>
 
@@ -39,6 +35,20 @@ import ContactForm from "../components/ContactForm.vue";
 
 export default {
   layout: "page",
-  components: { Banner, InscriptionForm, CTA , ContactForm},
+  components: { Banner, InscriptionForm, CTA, ContactForm },
 };
 </script>
+
+
+<style lang="scss">
+
+.formulaire__inscription{
+  width:1320px;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .formulaire__inscription {
+    width: 100%;
+    //background: red;
+  }
+}
+</style>

@@ -50,10 +50,8 @@
             </h2>
             <ul class="text-white">
               <li class="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  class="hover:underline"
-                  >collegepereplanque@gmail.com</a
+                <span
+                  >collegepereplanque@gmail.com</span
                 >
               </li>
               <li class="mb-4">

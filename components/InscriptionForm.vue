@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div class="mt-10 sm:mt-0 bg-blue- flex justify-center items-center">
-      <div style="width: 1320px">
+  <div class="w-full">
+      <div class="inscription__form">
         <div class="bg-re">
-          <div class="mt-5 md:mt-0 md:col-span-2 bg-green-">
-
-              <!-- title and description for inscription form -->
+          <div class=" bg-green-">
+            <!-- title and description for inscription form -->
             <div class="w-full h-auto my-5 bg-green-">
               <div
                 class="lg:w-full lg:h-auto lg:flex lg:justify-center lg:items-center"
@@ -34,7 +32,7 @@
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="">
-                    <div class="sm:col-span-3 ">
+                    <div class="sm:col-span-3">
                       <label
                         for="first-name"
                         class="block text-sm mt-2 font-medium text-gray-700"
@@ -43,11 +41,11 @@
                       <input
                         type="text"
                         name="first-name"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       />
                     </div>
 
-                    <div class="col-span-6  sm:col-span-3">
+                    <div class="">
                       <label
                         for="last-name"
                         class="block text-sm mt-2 font-medium text-gray-700"
@@ -56,7 +54,7 @@
                       <input
                         type="text"
                         name="last-name"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       />
                     </div>
 
@@ -69,7 +67,7 @@
                       <input
                         type="text"
                         name="email-address"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       />
                     </div>
 
@@ -82,11 +80,11 @@
                       <input
                         type="text"
                         name="address"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       />
                     </div>
 
-                    <div class="col-span-6 sm:col-span-3">
+                    <div class="sm:col-span-3">
                       <label
                         for="classe"
                         class="block text-sm font-medium text-gray-700"
@@ -94,13 +92,15 @@
                       >
                       <select
                         name="classe"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       >
-                        <option v-for="(item, index) in classes" :key="index">{{item}}</option>
+                        <option v-for="(item, index) in classes" :key="index">
+                          {{ item }}
+                        </option>
                       </select>
                     </div>
 
-                    <div class="col-span-6 sm:col-span-3">
+                    <div class="sm:col-span-3">
                       <label
                         for="classe"
                         class="block text-sm font-medium text-gray-700"
@@ -108,9 +108,11 @@
                       >
                       <select
                         name="classe"
-                        class="mt-3 border-2 w-12/12 lg:w-full"
+                        class="mt-3 border-2 w-12/12 w-full"
                       >
-                        <option v-for="(item, index) in classes" :key="index">{{item}}</option>
+                        <option v-for="(item, index) in classes" :key="index">
+                          {{ item }}
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -145,32 +147,42 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
-  export default  {
-    data() {
-      return {
-        classes: [
-          "6ème", 
-          "5ème", 
+export default {
+  data() {
+    return {
+      classes: [
+        "6ème",
+        "5ème",
 
-          "4ème", 
-          "3ème", 
-          "2nde S", 
-          "2nde A4", 
-          "1ère D", 
-          "1ère C", 
-          "1ère A4", 
-          "Tle D", 
-          "Tle C", 
-          "Tle A4"
-
-
-      ]
-      }
-    },
-  }
+        "4ème",
+        "3ème",
+        "2nde S",
+        "2nde A4",
+        "1ère D",
+        "1ère C",
+        "1ère A4",
+        "Tle D",
+        "Tle C",
+        "Tle A4",
+      ],
+    };
+  },
+};
 </script>
+
+<style lang="scss">
+.inscription__form {
+  width: 1320px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 900px){
+  .inscription__form{
+    width:100%; 
+    //background: red;
+  }
+}
+</style>

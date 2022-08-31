@@ -2,7 +2,7 @@
     <div>
          <div class="2xl:mx-auto dark:bg-gray-900 2xl:container md:px-20 px-4 md:py-12 py-9">
             <div class="relative rounded-md">
-                <div  class="w-full cta-bg h-full rounded-md  object-center object-fill absolute sm:block hidden" ></div>
+                <div  class="w-full cta-bg h-full rounded-md object-fill" ></div>
                 <!-- <img src="https://i.ibb.co/LQpxBsc/mobile.png" alt="city view" class="w-full h-full rounded-md absolute object-center object-fill sm:hidden" /> -->
                 <div class="text-xl relative  bg-gradient-to-r from-red-700 to-transparent w-full h-full z-40 top-0 md:p-16 p-6 flex flex-col justify-between rounded-md ">
                     <div>
