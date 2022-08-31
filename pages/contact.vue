@@ -47,14 +47,14 @@
                                     amet consectetur adipisicing elit. Sint, distinctio?</h2>
                                 <div v-for="(element, index) in formInputs" :key="index" class="mt-4 md:mt-8">
                                     <p class="text-gray-800  font-medium">{{  element.name  }}</p>
-                                    <input class="mt-3  border-2 w-12/12 lg:w-full xl:w-10/12 focus:border-red-400 "
+                                    <input class="mt-3  border-2 w-full focus:border-red-400 "
                                         type="text" :placeholder="element.placeholder" />
                                 </div>
 
                                 <div class="mt-4 md:mt-8">
                                     <p class="text-gray-800  font-medium">Message</p>
                                     <textarea
-                                        class="mt-3  border-2 w-11/12 lg:w-full xl:w-10/12 resize-none outline-none focus:border-red-600  border-black xl:h-40 py-5 pl-4 text-gray-800 dark:text-white"
+                                        class="mt-3  border-2 w-full resize-none outline-none focus:border-red-600  border-black xl:h-40 py-5 pl-4 text-gray-800 dark:text-white"
                                         type="text" placeholder="Entrez votre message"></textarea>
                                 </div>
                                 <div class="py-5">

@@ -42,9 +42,9 @@
             </ul>
           </div>
           <!-- contact -->
-          <div>
+          <div class="footer__informations">
             <h2
-              class="mb-6 underline text-sm font-semibold text-white uppercase border-l-8  pl-2 border-red-400"
+              class="mb-6  underline text-sm font-semibold text-white uppercase border-l-8  pl-2 border-red-400"
             >
               informations
             </h2>
@@ -66,10 +66,10 @@
           <div class="bg-green-">
             <h2
               class="mb-6 text-sm font-semibold text-white uppercase border-l-8 pl-2 border-red-400">
-              Horaires d'ouverture
+              Horaires
             </h2>
             <ul class="text-white">
-              <li class="mb-4 flex w-full justify-between">
+              <li class="mb-4 footer__horaires flex w-full justify-between">
                 <div>
                   <span class="hover:underline">Lundi</span>
                 </div>
@@ -152,5 +152,14 @@ export default {
 footer {
   background-color: #1c2e5e;
   color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px){
+  .footer__informations {
+    display: none;
+  }
+  .footer__horaires {
+    display: block;
+  }
 }
 </style>

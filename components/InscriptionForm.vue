@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full flex justify-center items-center py-8">
       <div class="inscription__form">
         <div class="bg-re">
           <div class=" bg-green-">
@@ -182,7 +182,12 @@ export default {
 @media only screen and (min-width: 320px) and (max-width: 900px){
   .inscription__form{
     width:100%; 
-    //background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+      width:90%;
+    }
   }
 }
 </style>

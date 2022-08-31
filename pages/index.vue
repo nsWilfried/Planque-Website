@@ -736,6 +736,10 @@ export default {
   }
 }
 
+.banner__info {
+  height: 100%;
+}
+
 .introduction {
   height: 600px;
   width: 1320px;
