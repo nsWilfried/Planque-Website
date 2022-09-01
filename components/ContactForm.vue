@@ -7,7 +7,7 @@
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
     </div>
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
-        <div class="w-full  mt-3 bg-green-" role="form">
+        <div  class="w-full  mt-3 bg-green-" role="form">
                                 <div v-for="(element, index) in formInputs" :key="index" class="mt-4 md:mt-8">
                                     <p class="text-gray-800  font-medium">{{ element.name }}</p>
                                     <input class="mt-3  border-2 w-full focus:border-red-400 "
@@ -24,7 +24,7 @@
                                     <button
                                         class="py-3 md:py-5 dark:bg-white dark:text-gray-800 px-5 md:px-10 bg-red-400 text-white hover:opacity-90 ease-in duration-150 text-sm md:text-lg tracking-wider font-semibold focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Envoyer</button>
                                 </div>                    
-        </div>
+                            </div>
     </div>
   </div>
 </section>
