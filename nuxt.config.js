@@ -61,7 +61,21 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'i.e370d310da4-fe8bb7+1@inbox.mailtrap.io',
+      },
+      smtp: {
+        host: "smtp.mailtrap.io",
+        port: 2525,
+          auth: {
+            user: "47b6f685efaae4",
+            pass: "f536a1be47b9e4"
+        }
+      },
+  
+    }],
   ],
   webfontloader: {
     google: {

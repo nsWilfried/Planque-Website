@@ -26,12 +26,11 @@
                                         dolor sit amet consectetur, adipisicing elit. Accusamus, dolore.</h2>
                                     <div v-for="(element, index) in contactInformations" :key="index"
                                         class="mt-4 md:mt-8">
-                                        <h2 class="text-sm md:text-base text-red-500 font-semibold">{{  element.name  }}
+                                        <h2 class="text-sm md:text-base text-red-500 font-semibold">{{ element.name }}
                                         </h2>
 
-                                            <h2
-                                                class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">
-                                                {{  element.value  }}</h2>
+                                        <h2 class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">
+                                            {{ element.value }}</h2>
 
                                     </div>
                                 </div>
@@ -42,26 +41,33 @@
                         <div class="flex flex-col items-start xl:justify-start 2xl:justify-end xl:px-0 px-4">
                             <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-red-500">Envoyer
                                 nous un message</h1>
-                            <div class="w-full  mt-3" role="form">
+                            <form @submit.prevent="sendEmail" class="w-full  mt-3" role="form">
                                 <h2 class="text-gray-800  md:text-lg leading-8 tracking-wider">Lorem ipsum dolor sit,
                                     amet consectetur adipisicing elit. Sint, distinctio?</h2>
                                 <div v-for="(element, index) in formInputs" :key="index" class="mt-4 md:mt-8">
-                                    <p class="text-gray-800  font-medium">{{  element.name  }}</p>
-                                    <input class="mt-3  border-2 w-full focus:border-red-400 "
-                                        type="text" :placeholder="element.placeholder" />
+                                    <p class="text-gray-800  font-medium">{{ element.name }}</p>
+                                    <input v-model.lazy="element.model" class="mt-3  border-2 w-full focus:border-red-400 " type="text"
+                                        :placeholder="element.placeholder" />
+                                        <!-- {{element.model}} -->
                                 </div>
 
                                 <div class="mt-4 md:mt-8">
                                     <p class="text-gray-800  font-medium">Message</p>
                                     <textarea
+                                    v-model="message"
                                         class="mt-3  border-2 w-full resize-none outline-none focus:border-red-600  border-black xl:h-40 py-5 pl-4 text-gray-800 dark:text-white"
                                         type="text" placeholder="Entrez votre message"></textarea>
                                 </div>
                                 <div class="py-5">
                                     <button
-                                        class="py-3 md:py-5 dark:bg-white dark:text-gray-800 px-5 md:px-10 bg-red-400 text-white hover:opacity-90 ease-in duration-150 text-sm md:text-lg tracking-wider font-semibold focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Envoyer</button>
+                                    type="submit"
+                                        class="py-3 md:py-5 dark:bg-white dark:text-gray-800 px-5 md:px-10 bg-red-400 text-white hover:opacity-90 ease-in duration-150 text-sm md:text-lg tracking-wider font-semibold focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+                                       <span v-if="!loading">Envoyer</span>
+                                       <span v-if="loading">Envoi ... </span>
+
+                                    </button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -72,6 +78,8 @@
         <!-- <div v-for="post in posts" :key='post.id'>
              {{post}}
         </div> -->
+
+        <!-- <button @click="sendEmail()">J'envoie un mail enfoiré</button> -->
     </div>
 </template>
 
@@ -80,7 +88,7 @@ import { groq } from '@nuxtjs/sanity'
 import Banner from "../components/Banner.vue"
 export default {
     layout: "page",
-    componets: { Banner },
+    components: { Banner },
     // async asyncData({isDev, route, store, env, params,$sanity, req, res, redirect, error}) {
     //     const query = groq`*[_type=="post"]`
     //     const posts = await $sanity.fetch(query)
@@ -91,6 +99,11 @@ export default {
     // },
     data() {
         return {
+            loading: false, 
+            name : "",
+            email: "",
+            object: "", 
+            message: "", 
             contactInformations: [
                 {
                     name: "Adresse Email",
@@ -105,24 +118,49 @@ export default {
                     value: "01 BP: 4796 , 488, rue KONDA Bè Kamalodo, Lomé,Togo."
                 }
             ],
-
+ 
             formInputs: [
                 {
                     name: "Nom",
-                    placeholder: "Entrez votre nom"
+                    placeholder: "Entrez votre nom", 
+                    model: this.name,
                 },
                 {
                     name: "Email",
-                    placeholder: "Entrez votre adresse mail"
+                    placeholder: "Entrez votre adresse mail", 
+                    model: this.email, 
+
                 },
                 {
                     name: "Objet",
-                    placeholder: "Entrez l'objet du message"
+                    placeholder: "Entrez l'objet du message", 
+                    model: this.object, 
+
                 },
 
             ]
         }
     },
+
+    methods: {
+        sendEmail() {
+            // console.log("je suis json produits", {
+            //     email:  this.formInputs[1].model, 
+            //     object: this.formInputs[2].model , 
+            //     name: this.formInputs[0].model , 
+            //     message: this.message
+            // })
+            this.loading = true
+            this.$mail.send({
+                from: this.formInputs[1].model,
+                subject: this.formInputs[2].model,
+                text: this.message
+            }).then(response => {
+                this.loading = false
+                alert("le message est bien envoyé enfoiré")
+            })
+        }
+    }
 }
 </script>
 
@@ -153,5 +191,7 @@ export default {
         width: 100px;
         height: 100px;
     }
+
 }
+
 </style>
