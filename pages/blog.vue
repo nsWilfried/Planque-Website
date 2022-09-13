@@ -80,10 +80,18 @@
         </section>
 
         <!-- call to action -->
-        <CTA/>
+        <!-- <CTA /> -->
 
         <!-- formulaire de contact -->
-    <contact-form/>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contactez-nous</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
+                    brooklyn asymmetrical gentrify.</p>
+            </div>
+            <contact-form />
+
+        </div>
     </div>
 </template>
 
@@ -94,7 +102,7 @@ import ContactForm from "../components/ContactForm.vue";
 
 export default {
     layout: "page",
-    components: { Banner, CTA, ContactForm},
+    components: { Banner, CTA, ContactForm },
     data() {
         return {
 
@@ -106,8 +114,8 @@ export default {
 
 <style lang="scss">
 .blog {
-    > section {
-    width: 1320px;
+    >section {
+        width: 1320px;
 
     }
 }

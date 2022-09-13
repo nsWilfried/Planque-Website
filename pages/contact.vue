@@ -41,33 +41,10 @@
                         <div class="flex flex-col items-start xl:justify-start 2xl:justify-end xl:px-0 px-4">
                             <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-red-500">Envoyer
                                 nous un message</h1>
-                            <form @submit.prevent="sendEmail" class="w-full  mt-3" role="form">
-                                <h2 class="text-gray-800  md:text-lg leading-8 tracking-wider">Lorem ipsum dolor sit,
-                                    amet consectetur adipisicing elit. Sint, distinctio?</h2>
-                                <div v-for="(element, index) in formInputs" :key="index" class="mt-4 md:mt-8">
-                                    <p class="text-gray-800  font-medium">{{ element.name }}</p>
-                                    <input v-model.lazy="element.model" class="mt-3  border-2 w-full focus:border-red-400 " type="text"
-                                        :placeholder="element.placeholder" />
-                                        <!-- {{element.model}} -->
-                                </div>
-
-                                <div class="mt-4 md:mt-8">
-                                    <p class="text-gray-800  font-medium">Message</p>
-                                    <textarea
-                                    v-model="message"
-                                        class="mt-3  border-2 w-full resize-none outline-none focus:border-red-600  border-black xl:h-40 py-5 pl-4 text-gray-800 dark:text-white"
-                                        type="text" placeholder="Entrez votre message"></textarea>
-                                </div>
-                                <div class="py-5">
-                                    <button
-                                    type="submit"
-                                        class="py-3 md:py-5 dark:bg-white dark:text-gray-800 px-5 md:px-10 bg-red-400 text-white hover:opacity-90 ease-in duration-150 text-sm md:text-lg tracking-wider font-semibold focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                                       <span v-if="!loading">Envoyer</span>
-                                       <span v-if="loading">Envoi ... </span>
-
-                                    </button>
-                                </div>
-                            </form>
+                            <div class="w-full">
+                                
+                                <ContactForm/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,9 +63,11 @@
 <script>
 import { groq } from '@nuxtjs/sanity'
 import Banner from "../components/Banner.vue"
+import ContactForm from "../components/ContactForm.vue"
+
 export default {
     layout: "page",
-    components: { Banner },
+    components: { Banner, ContactForm },
     // async asyncData({isDev, route, store, env, params,$sanity, req, res, redirect, error}) {
     //     const query = groq`*[_type=="post"]`
     //     const posts = await $sanity.fetch(query)
@@ -144,12 +123,6 @@ export default {
 
     methods: {
         sendEmail() {
-            // console.log("je suis json produits", {
-            //     email:  this.formInputs[1].model, 
-            //     object: this.formInputs[2].model , 
-            //     name: this.formInputs[0].model , 
-            //     message: this.message
-            // })
             this.loading = true
             this.$mail.send({
                 from: this.formInputs[1].model,
@@ -157,8 +130,15 @@ export default {
                 text: this.message
             }).then(response => {
                 this.loading = false
-                alert("le message est bien envoyé enfoiré")
+                // alert("le message est bien envoyé enfoiré")
+                this.resetForm();
             })
+        }, 
+        resetForm(){
+            this.name = "",
+            this.email= "",
+            this.object= "", 
+            this.message= ""
         }
     }
 }

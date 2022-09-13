@@ -1,9 +1,9 @@
 <template>
   <div
-    class="w-full flex bg-green-400 items-end justify-center"
+    class="w-full flex banneur bg-green-400 items-end justify-center"
     style="height: 400px"
   >
-    <div class="flex bg-red- banner__info flex-col justify-center">
+    <div class="flex bg-red- banneur__info flex-col justify-center">
       <span
         class="text-white font-bold border-l-8 border- border-red-400 text-6xl pl-10 uppercase"
         >{{ bannerTitle }}</span
@@ -27,12 +27,16 @@ export default {
 };
 </script>
 <style lang="scss">
-.banner__info {
+  // .banner {
+  //   // background-image: url("../assets/imgs/banner.jpg");
+  //   // background-position: center;
+  // }
+.banneur__info {
   width: 1320px;
   height: 200px;
 }
 @media only screen and (min-width: 320px) and (max-width: 900px) {
-    .banner__info{
+    .banneur__info{
         width: 90%;
         height: 200px;
         > span {
