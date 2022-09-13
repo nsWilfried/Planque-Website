@@ -60,12 +60,11 @@
         <div class="flex banner__info justify-center items-center bg-blue- w-1/3 p-6">
           <div class="grid grid-rows-3">
             <div class="w-full flex items-center bg-red-">
-              <h2 class="text-3xl capitalize">collège</h2>
+              <h2 class="text-3xl capitalize">{{cycles[0].title}} </h2>
             </div>
 
             <div class="bg-green-">
-              <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.is
-                illo nesciunt culpa possimus.
+              <span>{{cycles[0].description[0].children[0].text}}
               </span>
             </div>
 
@@ -93,12 +92,11 @@
         <div class="flex banner__info justify-center items-center bg-blue- w-1/3 p-6">
           <div class="grid grid-rows-3">
             <div class="w-full flex items-center bg-red-">
-              <h2 class="text-3xl capitalize">Lycée</h2>
+              <h2 class="text-3xl capitalize">{{cycles[1].title}}</h2>
             </div>
 
             <div class="bg-green-">
-              <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.is
-                illo nesciunt culpa possimus.
+              <span>{{cycles[1].description[0].children[0].text}}
               </span>
             </div>
 
@@ -352,62 +350,24 @@
         </div>
         <div class="px-4 bg-green- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div class="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
+            <div v-for="(post, index) in posts" :key="index" class="overflow-hidden transition-shadow duration-300 bg-white rounded">
               <a href="/" aria-label="Article"><img
                   src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   class="object-cover w-full h-64 rounded" alt="" /></a>
               <div class="py-5">
-                <p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
-                  13 Jul 2020
+                <p class="mb-2 text-xs font-semibold text-gray-600">
+                  {{$moment(post.created_at)}}
                 </p>
                 <a href="/" aria-label="Article"
                   class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">
-                  <p class="text-2xl font-bold leading-5">Diving to the deep</p>
+                  <p class="text-2xl font-bold leading-5">{{post.title}}</p>
                 </a>
                 <p class="mb-4 text-gray-700">
-                  Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                  consequuntur magni voluptatem doloremque.
+                  {{post.description[0].children[0].text}}
                 </p>
               </div>
             </div>
-            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
-              <a href="/" aria-label="Article"><img
-                  src="https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-                  class="object-cover w-full h-64 rounded" alt="" /></a>
-              <div class="py-5">
-                <p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
-                  4 Nov 2020
-                </p>
-                <a href="/" aria-label="Article"
-                  class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">
-                  <p class="text-2xl font-bold leading-5">Conquer the World</p>
-                </a>
-                <p class="mb-4 text-gray-700">
-                  Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                  consequuntur magni voluptatem doloremque.
-                </p>
-              </div>
-            </div>
-            <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
-              <a href="/" aria-label="Article"><img
-                  src="https://images.pexels.com/photos/2123755/pexels-photo-2123755.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                  class="object-cover w-full h-64 rounded" alt="" /></a>
-              <div class="py-5">
-                <p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
-                  28 Dec 2020
-                </p>
-                <a href="/" aria-label="Article"
-                  class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">
-                  <p class="text-2xl font-bold leading-5">
-                    Explore the beautiful
-                  </p>
-                </a>
-                <p class="mb-4 text-gray-700">
-                  Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                  consequuntur magni voluptatem doloremque.
-                </p>
-              </div>
-            </div>
+        
           </div>
         </div>
       </div>
@@ -457,6 +417,7 @@
 
 <script>
 import { Swiper, Navigation, Pagination, Autoplay } from "swiper";
+import { groq } from '@nuxtjs/sanity'
 import "swiper/swiper-bundle.min.css";
 import ContactForm from "../components/ContactForm.vue";
 
@@ -467,6 +428,16 @@ export default {
     ContactForm,
   },
   layout: "page",
+   async asyncData({isDev, route, store, env, params,$sanity, req, res, redirect, error}) {
+        const queryCycle = groq`*[_type=="cycle"]`
+        const queryPost = groq`*[_type=="post"]`
+        const cycles = await $sanity.fetch(queryCycle)
+        const posts = await $sanity.fetch(queryPost)
+
+        return {
+             cycles, posts
+        }
+    },
   mounted() {
     Swiper.use([Navigation, Pagination, Autoplay]);
 
@@ -495,6 +466,8 @@ export default {
       },
       // Configure other options. Not tested
     });
+
+    console.log("nous sommes l'ensemble des posts", this.posts)
   },
 
   data() {

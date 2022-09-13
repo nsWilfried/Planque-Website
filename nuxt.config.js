@@ -46,14 +46,22 @@ export default {
     '@nuxtjs/style-resources', 
     '@nuxtjs/fontawesome', 
     'nuxt-webfontloader', 
+    '@nuxtjs/moment',
 
 
   ],
 
+  // momentjs config
+  moment: {
+    locales: ['fr']
+  }, 
+
+  // sanity config
   sanity : {
     projectId: "b0ckc99w"
   }, 
 
+  // loading bar config
   loading: {
     color: '#bb1e32', 
     heigth: "4px"
@@ -77,11 +85,15 @@ export default {
   
     }],
   ],
+
+  // web fonts config
   webfontloader: {
     google: {
       families: ['Poppins:400,700, 900', 'Raleway:400, 700, 900', 'Lato:400'] 
     }
   },
+
+  // styles config 
   styleResources: {
     scss: [
       './assets/styles/vars/*.scss',
@@ -89,10 +101,12 @@ export default {
       ]
   }, 
 
+  // tailwindcss config
   tailwindcss: {
     exposeConfig: true
   }, 
  
+  // fontawesome config
   fontawesome:  {
     icons: {
       solid: true, 
@@ -100,6 +114,7 @@ export default {
     }
   },
 
+  // router config
   router: {
     extendRoutes(routes, resolve) {
       routes.push({

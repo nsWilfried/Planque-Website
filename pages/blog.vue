@@ -19,57 +19,29 @@
                                 alt="Beautiful italy street" />
                             <div class="mt-8 lg:mb-0 mb-8">
                                 <h2 tabindex="0" class=" dark:text-white f-m-m text-2xl font-semibold leading-7">
-                                    Beautiful Italy, Travel Blog</h2>
+                                  {{posts[posts.length - 1].title}} </h2>
+                                  <p class="mb-2 mt-2 text-xs font-semibold text-gray-600">
+                                        {{$moment(posts[posts.length - 1].created_at)}}
+                                    </p>
                                 <p tabindex="0" class=" dark:text-white text-base f-m-m leading-loose mt-2">Lorem
-                                    Ipsum is simply dummy text of the printing and typesetting industry. It has survived
-                                    not only five centuries. Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
+                                    {{posts[posts.length - 1].description[0].children[0].text}}</p>
 
                             </div>
                         </div>
                         <div class="lg:w-1/2 lg:ml-8">
-                            <div class="lg:flex items-start mb-8">
+                            <div v-for="(post, index) in random" :key="index" class="lg:flex items-start mb-8">
                                 <img tabindex="0" role="img" aria-label="bag on a table" alt="bag on table"
                                     src="https://cdn.tuk.dev/assets/components/111220/blg-17/blog2.png"
                                     class=" w-full" />
                                 <div class="lg:ml-6">
                                     <h3 tabindex="0"
                                         class=" dark:text-white f-m-m text-2xl font-semibold leading-7 lg:mt-0 mt-8">
-                                        A Broken Backpack</h3>
+                                        {{post.title}}</h3>
+                                    <p class="mb-2 mt-2 text-xs font-semibold text-gray-600">
+                                        {{$moment(post.created_at)}}
+                                    </p>
                                     <p tabindex="0" class=" dark:text-white text-base f-m-m leading-loose mt-2">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. It
-                                        has survived not only five centuries. Lorem Ipsum is simply dummy text of the
-                                        printing and typesetting industry.</p>
-
-                                </div>
-                            </div>
-                            <div class="lg:flex items-start mb-8">
-                                <img tabindex="0" role="img" aria-label="car in desert" alt="car in desert"
-                                    src="https://cdn.tuk.dev/assets/components/111220/blg-17/blog3.png"
-                                    class=" w-full" />
-                                <div class="lg:ml-6">
-                                    <h3 tabindex="0"
-                                        class=" dark:text-white f-m-m text-2xl font-semibold leading-7 lg:mt-0 mt-8">
-                                        My life’s a Movie</h3>
-                                    <p tabindex="0" class=" dark:text-white text-base f-m-m leading-loose mt-2">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. It
-                                        has survived not only five centuries. Lorem Ipsum is simply dummy text of the
-                                        printing and typesetting industry.</p>
-
-                                </div>
-                            </div>
-                            <div class="lg:flex items-start mb-8">
-                                <img tabindex="0" role="img" aria-label="man with camel" alt="man with camel"
-                                    src="https://cdn.tuk.dev/assets/components/111220/blg-17/blog4.png"
-                                    class=" w-full" />
-                                <div class="lg:ml-6">
-                                    <h3 tabindex="0"
-                                        class=" dark:text-white -m-m text-2xl font-semibold leading-7 lg:mt-0 mt-8">
-                                        Lilii’s Travel Plans</h3>
-                                    <p tabindex="0" class=" dark:text-white text-base f-m-m leading-loose mt-2">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. It
-                                        has survived not only five centuries. Lorem Ipsum is simply dummy text of the
-                                        printing and typesetting industry.</p>
+                                        {{post.description[0].children[0].text}}</p>
 
                                 </div>
                             </div>
@@ -99,10 +71,18 @@
 import Banner from "../components/Banner.vue"
 import CTA from "../components/CTA.vue"
 import ContactForm from "../components/ContactForm.vue";
-
+import { groq } from '@nuxtjs/sanity'
 export default {
     layout: "page",
     components: { Banner, CTA, ContactForm },
+    async asyncData({ isDev, route, store, env, params, $sanity, req, res, redirect, error }) {
+        const queryPost = groq`*[_type=="post"]`
+        const posts = await $sanity.fetch(queryPost)
+        const random = posts.slice(0, posts.length - 1)
+        return {
+            posts, random 
+        }
+    },
     data() {
         return {
 
