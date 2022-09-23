@@ -82,42 +82,32 @@
           <!--title -->
           <div class="lg:w-full lg:h-auto lg:flex lg:justify-center lg:items-center">
             <h1 class="max-w-2xl mb-4 lg:text-center text-4xl font-extrabold tracking-tight leading-none">
-              Documents à fournir pour l'inscription
+              Pièces à fournir: 1 <sup>er</sup> & 2 <sup>er</sup> CYCLES
             </h1>
           </div>
 
           <!-- description -->
           <div class="lg:w-full lg:h-auto lg:flex lg:justify-center lg:items-center">
             <p
-              class="max-w-2xl lg:text-center mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+              class="max-w-2xl lg:text-center mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">
               From checkout to global sales tax compliance, companies around the
               world use Flowbite to simplify their payment stack.
             </p>
           </div>
 
           <div class="lg:w-full lg:h-auto lg:flex lg:justify-center lg:items-center">
-            <ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
-              <li class="flex items-center space-x-3">
+            <ul class="mb-8 space-y-4 text-left text-gray-500 ">
+              <li v-for="(item, index) in pieces" :key="index" class="flex items-center space-x-3" style="width: 500px;background: ; ">
                 <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                <svg class="flex-shrink-0 w-5 h-5 text-green-500 bg-white " fill="currentColor"
                   viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <span>Individual configuration</span>
+                <span>{{item.text}}</span>
               </li>
 
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Individual configuration</span>
-              </li>
 
             </ul>
           </div>
@@ -156,7 +146,30 @@ export default {
   components: { Banner, InscriptionForm, CTA, ContactForm },
   data() {
     return {
-
+      pieces: [
+        {
+          text: "Trois (03) copies légalisées de l'acte de naissance"
+        }, 
+        {
+          text: "Deux (02) copies légalisées du relevé de notes du CEPD(Pour le 1er cycle), du BEPC ou du BAC1(Pour le 2ème cycle)"
+        },
+        {
+          text: "Deux (02) copies légalisées de l'attestation du CEPD(Pour le 1er cycle à partir de la classe de 5e)"
+        },
+        {
+          text: "Les bulletins de note de l'année précédente"
+        },
+        {
+          text: "Un certificat de scolarité"
+        },
+        {
+          text: "Trois (03) photos d'identité"
+        },
+        {
+          text: "Un certificat médical"
+        },
+        
+      ]
     }
   },
 };
