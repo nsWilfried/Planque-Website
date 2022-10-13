@@ -444,7 +444,7 @@ export default {
   },
   mounted() {
     Swiper.use([Navigation, Pagination, Autoplay]);
-
+    console.log("tout les posts", this.posts)
     //swiper config
     const swiper = new Swiper(".swiper", {
       // Optional parameters
@@ -569,7 +569,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
+@media only screen and (min-width: 320px) and (max-width: 900px) {
   .banner__informations {
     &__content {
       flex-direction: column;
@@ -587,6 +587,7 @@ export default {
 
     &__stepper {
       width: 80%;
+      // background-color: #bb1e32;
     }
 
     &__image {
